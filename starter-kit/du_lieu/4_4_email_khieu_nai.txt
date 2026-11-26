@@ -1,0 +1,36 @@
+EMAIL KHIẾU NẠI CỦA KHÁCH
+
+Tôi đi tuyến Sài Gòn – Đà Lạt SGDL ngày 01/11/2026 và về ngày 04/11/2026, đi 3 người. Tôi đặt và trả tiền giường nằm, nhưng cả chặng đi và chặng về nhà xe đều đổi sang xe ghế ngồi. Tài xế lái xe cẩn thận, tôi không có gì phàn nàn về tài xế. Tôi đề nghị nhà xe giải quyết thỏa đáng.
+
+======================================================
+CHÍNH SÁCH ĐỀN BÙ CỦA PHƯƠNG NAM EXPRESS
+======================================================
+
+- tre_chuyen: xe khởi hành trễ trên 1 giờ do nhà xe: tặng voucher 50.000 đồng/khách.
+- sai_loai_xe: đổi sang loại xe khác loại khách đã đặt: hoàn 120.000 đồng/khách cho mỗi chặng bị đổi.
+- tai_xe: khiếu nại về thái độ tài xế, phụ xe: tặng voucher 100.000 đồng/khách.
+- khac: chuyển bộ phận Chăm sóc khách hàng xem xét, chưa đề xuất mức đền bù.
+- Tổng mức đền bù trên 500.000 đồng phải được Trưởng phòng điều hành duyệt trước khi gửi khách.
+
+======================================================
+ĐỊNH DẠNG ĐẦU RA CỦA TRẠM 1 (sinh viên viết prompt)
+======================================================
+
+Trạm 1 – đọc email, trả về chỉ một đối tượng JSON gồm đúng 4 trường:
+{"loai_su_co": một trong "tre_chuyen" | "sai_loai_xe" | "tai_xe" | "khac", "so_khach": số nguyên, "so_chang_bi_doi": số nguyên hoặc null, "tom_tat": "không quá 20 từ"}
+
+======================================================
+PROMPT TRẠM 2 (đã có sẵn, không cần viết)
+======================================================
+
+Dưới đây là kết quả phân loại khiếu nại (JSON của Trạm 1) và chính sách đền bù. Chỉ dùng chính sách trong thẻ <chinh_sach> để tính tổng mức đền bù. Trả về đúng một đối tượng JSON, không giải thích:
+{"loai_su_co": ..., "muc_den_bu": tổng số tiền (đồng) hoặc null, "can_duyet": true nếu muc_den_bu trên 500.000, ngược lại false}
+<ket_qua_tram_1>(JSON của Trạm 1)</ket_qua_tram_1>
+<chinh_sach>(chính sách đền bù ở trên)</chinh_sach>
+
+======================================================
+PROMPT TRẠM 3 (đã có sẵn, không cần viết)
+======================================================
+
+Bạn là nhân viên chăm sóc khách hàng của Phương Nam Express. Dựa trên JSON trong thẻ <ket_qua_tram_2>, viết email phản hồi khách: xin lỗi, nêu đúng mức đền bù trong JSON, không tự đặt mức khác, giọng điệu chân thành, chuyên nghiệp, dưới 150 từ.
+<ket_qua_tram_2>(JSON của Trạm 2)</ket_qua_tram_2>

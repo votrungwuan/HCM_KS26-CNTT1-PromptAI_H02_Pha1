@@ -1,0 +1,35 @@
+BẢNG MÃ TUYẾN XE
+SGDL – Sài Gòn – Đà Lạt
+SGNT – Sài Gòn – Nha Trang
+SGCT – Sài Gòn – Cần Thơ
+
+QUY TẮC CHUẨN HOÁ (5 quy tắc)
+1. ma_tuyen lấy theo bảng mã tuyến xe.
+2. ngay_di dạng YYYY-MM-DD; tin nhắn không ghi năm thì lấy năm 2026; không có ngày cụ thể thì null.
+3. Khách không nhắc trẻ em thì ve_tre_em là 0 và mọi khách là người lớn.
+4. loai_cho chỉ nhận "giuong", "ghe" hoặc null.
+5. ghi_chu chỉ ghi yêu cầu đặc biệt về sức khoẻ, đi lại, mang thai; không có thì null.
+
+======================================================
+HAI TIN NHẮN MẪU ĐÃ XỬ LÝ ĐÚNG (dùng làm ví dụ)
+======================================================
+
+Tin nhắn mẫu 1:
+Đặt giúp em 2 vé người lớn 1 vé trẻ em đi Nha Trang ngày 18/11/2026, giường nằm nha. Bé hay say xe.
+Kết quả đúng:
+{"ma_tuyen": "SGNT", "ngay_di": "2026-11-18", "ve_nguoi_lon": 2, "ve_tre_em": 1, "loai_cho": "giuong", "ghi_chu": "bé hay say xe"}
+
+Tin nhắn mẫu 2:
+Xe đi Cần Thơ còn ghế ngồi không anh, em đi 1 mình, ngày nào cũng được.
+Kết quả đúng:
+{"ma_tuyen": "SGCT", "ngay_di": null, "ve_nguoi_lon": 1, "ve_tre_em": 0, "loai_cho": "ghe", "ghi_chu": null}
+
+======================================================
+BA TIN NHẮN CẦN XỬ LÝ
+======================================================
+
+TN1: Cho mình đặt xe Sài Gòn đi Đà Lạt ngày 22/12 nha, 2 người lớn với 1 bé 8 tuổi, đi giường nằm.
+
+TN2: Đặt 3 vé đi Nha Trang ngày 02/01/2027 ạ. Một người đang mang thai 6 tháng.
+
+TN3: Tuyến Cần Thơ dịp Tết còn vé không ạ? Nhà em 4 người lớn, bà nội đi xe lăn, đi ghế ngồi.
