@@ -1,8 +1,8 @@
 # BÀI LÀM PHA 1 – HACKATHON 02
 
 - **Mã đề:** 04
-- **Họ tên:**
-- **Lớp:**
+- **Họ tên:**Võ Trung Quân
+- **Lớp:**CNTT1
 - **Link repository Pha1:**
 
 > Pha 1 (70 phút đầu, KHÔNG dùng AI). Viết xong, kéo thả file này vào repository Pha1 trước mốc giờ giám thị công bố.
